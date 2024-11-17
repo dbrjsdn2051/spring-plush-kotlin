@@ -30,7 +30,6 @@ class TodoRepositoryCustomImpl(
         val totalCount = jpaQueryFactory
             .select(todo.count())
             .from(todo)
-            .leftJoin(todo.user, user)
             .where(weather?.let { todo.weather.eq(it) })
 
         return PageableExecutionUtils.getPage(todos, pageable) { totalCount.fetchOne() ?: 0L }
