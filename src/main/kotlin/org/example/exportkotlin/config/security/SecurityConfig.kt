@@ -34,8 +34,8 @@ class SecurityConfig(
                 auth
                     .dispatcherTypeMatchers(DispatcherType.FORWARD, DispatcherType.ERROR).permitAll()
                     .requestMatchers("/error").permitAll()
-//                    .requestMatchers(PathRequest.toH2Console()).permitAll()
-                    .requestMatchers("/auth/signup", "/auth/register").permitAll()
+                    .requestMatchers(PathRequest.toH2Console()).permitAll()
+                    .requestMatchers("/auth/login", "/auth/register").permitAll()
                     .anyRequest().authenticated()
             }
             .csrf { it.disable() }

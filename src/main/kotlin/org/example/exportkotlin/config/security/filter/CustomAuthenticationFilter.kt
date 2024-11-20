@@ -32,7 +32,7 @@ class CustomAuthenticationFilter(
     private val mapper = jacksonObjectMapper()
 
     init {
-        setFilterProcessesUrl("/auth/signup")
+        setFilterProcessesUrl("/auth/login")
     }
 
     override fun attemptAuthentication(request: HttpServletRequest?, response: HttpServletResponse?): Authentication {

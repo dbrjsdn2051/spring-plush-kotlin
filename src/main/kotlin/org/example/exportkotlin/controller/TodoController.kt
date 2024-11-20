@@ -32,7 +32,7 @@ class TodoController(
     fun getTodos(
         @RequestParam(defaultValue = "1", required = false, value = "page") page: Int,
         @RequestParam(defaultValue = "10", required = false, value = "size") size: Int,
-        @RequestParam(defaultValue = "", required = false, value = "weather") weather: String
+        @RequestParam(required = false, value = "weather") weather: String?
     ): ResponseEntity<Page<TodoFindAllRespDto>> {
         return ResponseEntity.ok(todoService.getTodos(page, size, weather))
     }

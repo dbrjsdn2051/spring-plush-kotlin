@@ -10,7 +10,7 @@ import io.kotest.matchers.shouldBe
 import io.mockk.every
 import io.mockk.mockk
 import io.mockk.verify
-import org.example.exportkotlin.`client `.WeatherClient
+import org.example.exportkotlin.client.WeatherClient
 import org.example.exportkotlin.config.security.AuthUser
 import org.example.exportkotlin.domain.manager.Manager
 import org.example.exportkotlin.domain.manager.ManagerRepository
